@@ -27,15 +27,15 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 bg-devotion-500 text-white p-4 flex items-center justify-between shadow-md z-10">
-      <button
-        onClick={onReset}
-        className="bg-devotion-600 hover:bg-devotion-700 transition-colors rounded-full p-2.5"
-        aria-label="Reset Path Counter"
-      >
-        <RefreshIcon />
-      </button>
-
       <div className="flex items-center space-x-3">
+        <button
+          onClick={onReset}
+          className="bg-devotion-600 hover:bg-devotion-700 transition-colors rounded-full p-2.5"
+          aria-label="Reset Path Counter"
+        >
+          <RefreshIcon />
+        </button>
+
         <button
           onClick={onDecrement}
           disabled={count === 0}
@@ -44,11 +44,11 @@ const Header: React.FC<HeaderProps> = ({
         >
           <MinusIcon />
         </button>
+      </div>
 
-        <div className="flex items-baseline bg-devotion-600 rounded-full px-4 py-1.5">
-          <span className="text-2xl font-bold">{count}</span>
-          <span className="text-sm ml-1">/108</span>
-        </div>
+      <div className="flex items-baseline bg-devotion-600 rounded-full px-4 py-1.5">
+        <span className="text-2xl font-bold">{count}</span>
+        <span className="text-sm ml-1">/108</span>
       </div>
 
       <div className="relative">
