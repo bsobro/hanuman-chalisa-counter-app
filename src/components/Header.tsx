@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({
         </button>
       </div>
 
-      <div className="flex items-baseline bg-devotion-600 rounded-full px-4 py-1.5">
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-baseline bg-devotion-600 rounded-full px-4 py-1.5">
         <span className="text-2xl font-bold">{count}</span>
         <span className="text-sm ml-1">/108</span>
       </div>
