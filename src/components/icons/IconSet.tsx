@@ -20,9 +20,9 @@ export const CheckIcon = () => {
 
 export const FontSizeIcon = () => {
   return (
-    <div className="flex items-center justify-center text-white">
+    <div className="flex items-baseline justify-center text-white">
       <span className="text-xs">अ</span>
-      <span className="text-base font-bold mx-0.5">अ</span>
+      <span className="text-base font-bold mx-0">अ</span>
     </div>
   );
 };
