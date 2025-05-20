@@ -21,7 +21,8 @@ export const CheckIcon = () => {
 export const FontSizeIcon = () => {
   return (
     <div className="flex items-center justify-center text-white">
-      <span className="text-base font-bold">अ</span>
+      <span className="text-xs">अ</span>
+      <span className="text-base font-bold mx-0.5">अ</span>
     </div>
   );
 };
