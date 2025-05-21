@@ -17,7 +17,7 @@ const FONT_SIZES = [
 
 const FontSizeMenu: React.FC<FontSizeMenuProps> = ({ currentFontSize, onChangeFontSize }) => {
   return (
-    <div className="absolute top-full right-0 mt-2 bg-white text-devotion-900 rounded-lg shadow-lg p-2 space-y-1 z-10 max-h-60 overflow-auto w-48">
+    <div className="absolute top-full right-0 mt-2 bg-white text-devotion-900 rounded-lg shadow-lg p-2 space-y-1 z-10 max-h-fit overflow-auto w-48">
       {FONT_SIZES.map(([size, label]) => (
         <button
           key={size}
