@@ -35,7 +35,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         {showSplash ? (
-          <SplashScreen onComplete={handleSplashComplete} />
+          <SplashScreen onAnimationComplete={handleSplashComplete} />
         ) : (
           <BrowserRouter>
             <Routes>

@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 bg-devotion-500 text-white p-4 flex items-center justify-between shadow-md z-10">
+    <header className="fixed w-full top-0 bg-devotion-500 text-white p-4 flex items-center justify-between shadow-md z-10">
       <div className="flex items-center space-x-3">
         <button
           onClick={onReset}

@@ -8,7 +8,7 @@ interface ChalisaTextProps {
 
 const ChalisaText: React.FC<ChalisaTextProps> = ({ fontSize }) => {
   return (
-    <div className="max-w-2xl mx-auto space-y-2 text-devotion-900 pb-28">
+    <div className="max-w-2xl mx-auto space-y-2 text-devotion-900 pb-28 pt-20">
       {chalisaText.map((line, index) => (
         <p
           key={index}
