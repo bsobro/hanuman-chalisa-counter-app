@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ChalisaText from '../components/ChalisaText';
+import ChunkedChalisaText from '../components/ChunkedChalisaText';
 import Celebration from '../components/Celebration';
 import Toast from '../components/Toast';
 
@@ -64,8 +64,8 @@ const Index = () => {
             currentFontSize={fontSize}
             onChangeFontSize={changeFontSize}
           />
-          <main className="flex-1 overflow-y-auto p-4 bg-devotion-50">
-            <ChalisaText fontSize={fontSize} />
+          <main className="flex-1 overflow-hidden bg-devotion-50">
+            <ChunkedChalisaText fontSize={fontSize} />
           </main>
           <Footer onIncrement={increment} isDisabled={count >= 108} />
         </>
