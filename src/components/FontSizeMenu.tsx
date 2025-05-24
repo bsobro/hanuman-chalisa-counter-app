@@ -7,12 +7,13 @@ interface FontSizeMenuProps {
 }
 
 const FONT_SIZES = [
-  ['text-xs', 'छोटा'],
-  ['text-sm', 'छोटा मध्यम'],
-  ['text-base', 'मध्यम'],
-  ['text-lg', 'बड़ा'],
-  ['text-xl', 'बहुत बड़ा'],
-  ['text-2xl', 'अति बड़ा']
+  ['text-xs', 'बहुत छोटा'],
+  ['text-sm', 'छोटा'],
+  ['text-base', 'छोटा मध्यम'],
+  ['text-lg', 'मध्यम'],
+  ['text-xl', 'बड़ा'],
+  ['text-2xl', 'बहुत बड़ा'],
+  ['text-3xl', 'अति बड़ा']
 ];
 
 const FontSizeMenu: React.FC<FontSizeMenuProps> = ({ currentFontSize, onChangeFontSize }) => {

@@ -10,7 +10,7 @@ const Index = () => {
   const [count, setCount] = useState(0);
   const [showCelebration, setShowCelebration] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  const [fontSize, setFontSize] = useState('text-base');
+  const [fontSize, setFontSize] = useState('text-lg');
 
   // Load saved font size from localStorage
   useEffect(() => {
