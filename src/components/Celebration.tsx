@@ -1,18 +1,20 @@
 
 import React from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface CelebrationProps {
   onReset: () => void;
 }
 
 const Celebration: React.FC<CelebrationProps> = ({ onReset }) => {
+  const { isDark } = useTheme();
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-devotion-100 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-devotion-100 dark:bg-devotion-600 overflow-hidden">
       <div className="absolute inset-0">
-        {Array.from({ length: 50 }).map((_, i) => (
+        {Array.from({ length: 100 }).map((_, i) => (
           <div
             key={i}
-            className={`absolute rounded-full animate-celebrate bg-devotion-${(i % 5) * 100 + 400}`}
+            className={`absolute rounded-full animate-celebrate bg-devotion-${(i % 5) * 100 + (isDark ? 0 : 400)}`}
             style={{
               width: `${Math.random() * 20 + 10}px`,
               height: `${Math.random() * 20 + 10}px`,
@@ -24,7 +26,7 @@ const Celebration: React.FC<CelebrationProps> = ({ onReset }) => {
           />
         ))}
       </div>
-      <div className="z-10 text-center p-6 bg-white/30 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl">
+      <div className="z-10 text-center p-6 bg-white/30 dark:bg-white/50 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl">
         <h1 className="text-4xl font-bold text-devotion-700 mb-6">
           जय श्री राम! जय हनुमान!
         </h1>
