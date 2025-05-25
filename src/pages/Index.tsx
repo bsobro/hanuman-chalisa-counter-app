@@ -52,7 +52,7 @@ const Index = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-devotion-50">
+    <div className="flex flex-col min-h-screen bg-devotion-50 dark:bg-slate-900 transition-colors duration-300">
       {showCelebration ? (
         <Celebration onReset={reset} />
       ) : (
@@ -64,7 +64,7 @@ const Index = () => {
             currentFontSize={fontSize}
             onChangeFontSize={changeFontSize}
           />
-          <main className="flex-1 overflow-y-auto p-4 bg-devotion-50">
+          <main className="flex-1 overflow-y-auto p-4 bg-devotion-50 dark:bg-slate-900 transition-colors duration-300">
             <ChalisaText fontSize={fontSize} />
           </main>
           <Footer onIncrement={increment} isDisabled={count >= 108} />
