@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="relative">
           <button
             onClick={() => setShowFontSizeMenu(!showFontSizeMenu)}
-            className="bg-devotion-600 hover:bg-devotion-700 transition-colors rounded-full p-2.5 w-10 h-10 flex items-center justify-center"
+            className={`${showFontSizeMenu ? 'bg-devotion-700' : 'bg-devotion-600 hover:bg-devotion-700'} transition-colors rounded-full p-2.5 w-10 h-10 flex items-center justify-center`}
             aria-label="Change Font Size"
           >
             <FontSizeIcon />

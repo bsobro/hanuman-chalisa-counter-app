@@ -18,13 +18,13 @@ const FONT_SIZES = [
 
 const FontSizeMenu: React.FC<FontSizeMenuProps> = ({ currentFontSize, onChangeFontSize }) => {
   return (
-    <div className="absolute top-full right-0 mt-2 bg-white text-devotion-900 rounded-lg shadow-lg p-2 space-y-1 z-10 max-h-fit overflow-auto w-48">
+    <div className="absolute top-full right-0 mt-2 bg-white dark:bg-devotion-600 text-devotion-900 dark:text-white rounded-lg shadow-lg p-2 space-y-1 z-10 max-h-fit overflow-auto w-48">
       {FONT_SIZES.map(([size, label]) => (
         <button
           key={size}
           onClick={() => onChangeFontSize(size)}
           className={`block w-full text-left px-3 py-1.5 rounded ${
-            currentFontSize === size ? 'bg-devotion-200' : 'hover:bg-devotion-100'
+            currentFontSize === size ? 'bg-devotion-200 dark:bg-devotion-400' : 'dark:bg-devotion-600 hover:bg-devotion-100 dark:hover:bg-devotion-500'
           }`}
         >
           {label}
