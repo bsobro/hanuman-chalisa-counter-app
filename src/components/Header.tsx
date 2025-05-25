@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { RefreshIcon, MinusIcon, FontSizeIcon } from './icons/IconSet';
 import FontSizeMenu from './FontSizeMenu';
+import ThemeToggle from './ThemeToggle';
 
 interface HeaderProps {
   count: number;
@@ -51,18 +52,22 @@ const Header: React.FC<HeaderProps> = ({
         <span className="text-sm ml-1">/108</span>
       </div>
 
-      <div className="relative">
-        <button
-          onClick={() => setShowFontSizeMenu(!showFontSizeMenu)}
-          className="bg-devotion-600 hover:bg-devotion-700 transition-colors rounded-full p-2.5 w-10 h-10 flex items-center justify-center"
-          aria-label="Change Font Size"
-        >
-          <FontSizeIcon />
-        </button>
+      <div className="flex items-center space-x-3">
+        <ThemeToggle />
+        
+        <div className="relative">
+          <button
+            onClick={() => setShowFontSizeMenu(!showFontSizeMenu)}
+            className="bg-devotion-600 hover:bg-devotion-700 transition-colors rounded-full p-2.5 w-10 h-10 flex items-center justify-center"
+            aria-label="Change Font Size"
+          >
+            <FontSizeIcon />
+          </button>
 
-        {showFontSizeMenu && (
-          <FontSizeMenu currentFontSize={currentFontSize} onChangeFontSize={handleFontSizeChange} />
-        )}
+          {showFontSizeMenu && (
+            <FontSizeMenu currentFontSize={currentFontSize} onChangeFontSize={handleFontSizeChange} />
+          )}
+        </div>
       </div>
     </header>
   );
